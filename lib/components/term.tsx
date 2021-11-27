@@ -267,15 +267,14 @@ export default class Term extends React.PureComponent<TermProps> {
   };
 
   onMouseUp = (e: React.MouseEvent) => {
-    if (this.props.quickEdit && e.button === 2) {
-      if (this.term.hasSelection()) {
-        clipboard.writeText(this.term.getSelection());
-        this.term.clearSelection();
-      } else {
-        document.execCommand('paste');
-      }
-    } else if (this.props.copyOnSelect && this.term.hasSelection()) {
+    if (e.button === 0 && this.props.copyOnSelect && this.term.hasSelection())
       clipboard.writeText(this.term.getSelection());
+
+    if (e.button === 1 && this.props.thirdButtonPaste) this.term.paste(clipboard.readText());
+
+    if (e.button === 2) {
+      if (this.term.hasSelection() && clipboard.writeText(this.term.getSelection())) this.term.clearSelection();
+      else this.term.paste(clipboard.readText());
     }
   };
 

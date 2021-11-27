@@ -104,6 +104,7 @@ export default class Terms extends React.Component<TermsProps> {
             bellSoundURL: this.props.bellSoundURL,
             bellSound: this.props.bellSound,
             copyOnSelect: this.props.copyOnSelect,
+            thirdButtonPaste: this.props.thirdButtonPaste,
             modifierKeys: this.props.modifierKeys,
             onActive: this.props.onActive,
             onResize: this.props.onResize,

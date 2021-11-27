@@ -97,6 +97,7 @@ const initial: uiState = Immutable<Mutable<uiState>>({
   bellSoundURL: null, // directly relates to the value in the configuration file
   bellSound: null, // A base64 encoded binary string representation of the audio data from the bellSoundURL
   copyOnSelect: false,
+  thirdButtonPaste: false,
   modifierKeys: {
     altIsMeta: false,
     cmdIsMeta: false
@@ -222,6 +223,10 @@ const reducer: IUiReducer = (state = initial, action) => {
 
             if (typeof config.copyOnSelect !== 'undefined' && config.copyOnSelect !== null) {
               ret.copyOnSelect = config.copyOnSelect;
+            }
+
+            if (typeof config.thirdButtonPaste !== 'undefined' && config.thirdButtonPaste !== null) {
+              ret.thirdButtonPaste = config.thirdButtonPaste;
             }
 
             if (config.colors) {

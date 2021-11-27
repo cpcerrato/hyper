@@ -28,6 +28,7 @@ export type configOptions = {
   borderColor: string;
   colors: ColorMap;
   copyOnSelect: boolean;
+  thirdButtonPaste: boolean;
   css: string;
   cursorAccentColor: string;
   cursorBlink: boolean;

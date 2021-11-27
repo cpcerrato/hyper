@@ -42,6 +42,7 @@ export type uiState = Immutable<{
   colors: ColorMap;
   cols: number | null;
   copyOnSelect: boolean;
+  thirdButtonPaste: boolean;
   css: string;
   cursorAccentColor: string;
   cursorBlink: boolean;
@@ -267,6 +268,7 @@ export type TermGroupOwnProps = {
   | 'borderColor'
   | 'colors'
   | 'copyOnSelect'
+  | 'thirdButtonPaste'
   | 'cursorBlink'
   | 'cursorColor'
   | 'cursorShape'
@@ -318,6 +320,7 @@ export type TermProps = {
   colors: ColorMap;
   cols: number | null;
   copyOnSelect: boolean;
+  thirdButtonPaste: boolean;
   cursorAccentColor?: string;
   cursorBlink: boolean;
   cursorColor: string;

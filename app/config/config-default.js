@@ -134,6 +134,9 @@ module.exports = {
     // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
     copyOnSelect: false,
 
+    // if `true` (without backticks and without quotes), clipboard buffer will be pasted by pressing mouse third button (scroll button)
+    thirdButtonPaste: false,
+
     // if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
     defaultSSHApp: true,
 
